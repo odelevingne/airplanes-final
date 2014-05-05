@@ -7,6 +7,13 @@ describe 'plane' do
 		expect(plane).to be_flying
 	end
 
+	it "should have a flying status when in the air" do
+		plane = Plane.new
+		expect(plane.flying?).to eq "Flying!"
+	end
+
+	it 
+
 end
 
 
