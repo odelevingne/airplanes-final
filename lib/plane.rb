@@ -13,6 +13,7 @@ def flying?
 end
 
 def land!
+	raise "I'm already in the Airport!"if @flying == false
 	@flying = false
 	self
 end
