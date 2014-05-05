@@ -1,4 +1,4 @@
-require 'weather'
+require_relative 'weather'
 
 class Airport
 
@@ -9,7 +9,7 @@ class Airport
 def initialize(capacity = DEFAULT_CAPACITY)
 	@capacity = capacity
 	@plane_count = []
-
+	@weather = "Sunny!"
 end
 
 def plane_count
