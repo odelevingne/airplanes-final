@@ -18,6 +18,7 @@ def land!
 end
 
 def takeoff!
+	raise "I'm already flying!" if @flying == true
 	@flying = true
 	self
 end

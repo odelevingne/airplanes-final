@@ -22,6 +22,12 @@ describe 'plane' do
 		expect(plane.flying?).to eq "Flying!"
 	end
 
+	it "should tell return an error if told to take off whilst in the air" do
+		plane
+		expect(plane.flying?).to eq "Flying!"
+		expect{ (plane.takeoff!)}.to raise_error(RuntimeError)
+	end
+
 end
 
 
