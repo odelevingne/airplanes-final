@@ -18,10 +18,7 @@ describe 'airport' do
 		end
 
 		it "can have a plane take off" do
-			# expect(plane).to receive(:land!)
 			airport.clear_to_land(plane)
-			# expect(airport.plane_count).to eq [plane]
-			# expect(plane).to receive(:takeoff!)
 			airport.clear_to_takeoff(plane)
 			expect(airport.plane_count).to eq []
 		end
@@ -33,8 +30,10 @@ describe 'airport' do
 			expect(airport.capacity).to eq (Airport::DEFAULT_CAPACITY)
 		end
 
-		it "should know if it's full" do
-
+		it "should know when it's full" do
+			(airport.capacity.times{airport.clear_to_land(plane)})
+			expect(airport.plane_count).to eq [plane, plane, plane, plane, plane, plane]
+			expect(airport).to be_full
 		end
 
 	end

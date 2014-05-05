@@ -12,6 +12,7 @@ def plane_count
 end
 
 def clear_to_land(plane)
+
 		plane.land!
 		@plane_count << plane
 end
@@ -23,6 +24,10 @@ end
 
 def capacity
 		@capacity
+end
+
+def full?
+		plane_count = @capacity
 end
 
 end
