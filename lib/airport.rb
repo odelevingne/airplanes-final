@@ -13,4 +13,9 @@ def clear_to_land(plane)
 		@plane_count << plane
 end
 
+def clear_to_takeoff(plane)
+		plane.takeoff!
+		@plane_count.delete(plane)
+end
+
 end
