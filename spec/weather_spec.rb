@@ -4,9 +4,16 @@ describe 'weather' do
 	
 	it "can be sunny" do
 		airport = Airport.new
-		airport.stub(:weather?) { "Sunny!"}
+		airport.stub(:weather?) { "Sunny!" }
 		expect(airport.weather?).to eq "Sunny!"
 	end
+
+	it "can be stormy" do
+		airport = Airport.new
+		airport.stub(:weather?) { "Stormy!" }
+		expect(airport.weather?).to eq "Stormy!"
+	end
+
 end
 
 
