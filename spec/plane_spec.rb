@@ -1,22 +1,23 @@
 require 'plane'
 
 describe 'plane' do
+
+	let(:plane) {Plane.new}
 	
 	it "should be flying when created" do
-		plane = Plane.new
 		expect(plane).to be_flying
 	end
 
 	it "should have a flying status when in the air" do
-		plane = Plane.new
 		expect(plane.flying?).to eq "Flying!"
 	end
 
 	it "should be able to land" do
-		plane = Plane.new
 		plane.land!
 		expect(plane.flying?).to eq "In Airport"
 	end
+
+
 
 end
 
