@@ -16,4 +16,8 @@ def land!
 	@flying = false
 end
 
+def takeoff!
+	@flying = true
+end
+
 end
