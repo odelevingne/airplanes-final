@@ -1,23 +1,25 @@
 class Plane
 
 def initialize
-	@flying = true
+	takeoff!
 end
 
 def flying?
 	if @flying == true
 		return "Flying!"
 	else 
-		return "In Airport"
+		"In Airport"
 	end
 end
 
 def land!
 	@flying = false
+	self
 end
 
 def takeoff!
 	@flying = true
+	self
 end
 
 end

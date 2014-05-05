@@ -18,8 +18,7 @@ describe 'plane' do
 	end
 
 	it "should be able to take off" do
-		plane.land!
-		plane.takeoff!
+		plane.land!.takeoff!
 		expect(plane.flying?).to eq "Flying!"
 	end
 
