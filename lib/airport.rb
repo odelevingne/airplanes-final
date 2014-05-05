@@ -1,6 +1,9 @@
 class Airport
 
-def initialize
+	DEFAULT_CAPACITY = 6
+
+def initialize(capacity = DEFAULT_CAPACITY)
+	@capacity = capacity
 	@plane_count = []
 end
 
@@ -16,6 +19,10 @@ end
 def clear_to_takeoff(plane)
 		plane.takeoff!
 		@plane_count.delete(plane)
+end
+
+def capacity
+		@capacity
 end
 
 end
