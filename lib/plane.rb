@@ -12,4 +12,8 @@ def flying?
 	end
 end
 
+def land!
+	@flying = false
+end
+
 end

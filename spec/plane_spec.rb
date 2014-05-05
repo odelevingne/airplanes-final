@@ -12,7 +12,11 @@ describe 'plane' do
 		expect(plane.flying?).to eq "Flying!"
 	end
 
-	it 
+	it "should be able to land" do
+		plane = Plane.new
+		plane.land!
+		expect(plane.flying?).to eq "In Airport"
+	end
 
 end
 
