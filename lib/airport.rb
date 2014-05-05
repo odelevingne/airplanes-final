@@ -12,7 +12,7 @@ def plane_count
 end
 
 def clear_to_land(plane)
-
+		raise "Airport is full! Find somewhere else!" if full?
 		plane.land!
 		@plane_count << plane
 end
@@ -27,7 +27,7 @@ def capacity
 end
 
 def full?
-		plane_count = @capacity
+		plane_count.count == @capacity
 end
 
 end

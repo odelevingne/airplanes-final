@@ -36,6 +36,11 @@ describe 'airport' do
 			expect(airport).to be_full
 		end
 
+		it "cannot land anymore planes when full" do
+			(airport.capacity.times{airport.clear_to_land(plane)})
+			expect(airport).to be_full
+			expect{(airport.clear_to_land(plane))}.to raise_error {RuntimeError}
+		end
 	end
 
 
